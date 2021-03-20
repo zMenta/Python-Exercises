@@ -32,3 +32,4 @@ for palavras in words:
     for letras in palavras:
         if letras.upper() in "AEIOU":
             print(letras)'''
+            
