@@ -23,3 +23,12 @@ for c in range(0,len(words)):
     
     print("\n")
 
+
+
+#Other logic to solve the same problem
+'''
+for palavras in words:
+    print(palavras)
+    for letras in palavras:
+        if letras.upper() in "AEIOU":
+            print(letras)'''
