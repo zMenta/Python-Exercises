@@ -9,12 +9,12 @@ print("-="*40)
 
 print(f"You typed the following numbers: {numbers}")
 
-print(f"The highest number that you typed is {max(numbers)} in the {numbers.index(max(numbers))}th position",end="")
+print(f"The highest number that you typed is {max(numbers)}, and it is on the",end="")
 
-if numbers.count(max(numbers)) > 1:
-    for i in range(numbers.count(max(numbers))):
+for posi,index in enumerate(numbers):
+    if index == max(numbers):
+        print(f" {posi}th,",end="")
 
-        position = numbers.index(max(numbers))
-        
-        print(f"IS IN THE {position}th POSITION")
+print(" position")
 
+print(f"And the lowest number that you typed is {}")
