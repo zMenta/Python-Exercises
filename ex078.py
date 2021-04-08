@@ -11,10 +11,18 @@ print(f"You typed the following numbers: {numbers}")
 
 print(f"The highest number that you typed is {max(numbers)}, and it is on the",end="")
 
+#Highest number position verifier 
 for posi,index in enumerate(numbers):
     if index == max(numbers):
         print(f" {posi}th,",end="")
+print(" position.")
 
-print(" position")
+print(f"And the lowest number that you typed is {min(numbers)}, and it is on the",end="")
 
-print(f"And the lowest number that you typed is {}")
+#Lowest number position verifier
+for posi,index in enumerate(numbers):
+    if index == min(numbers):
+        print(f" {posi}th,",end="")
+print(" position.")
+
+print("-"*80)
