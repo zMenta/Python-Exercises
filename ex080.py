@@ -18,6 +18,6 @@ for i in range(5):
             for c in range(len(numbers)):
                 if num < numbers[c] and num not in numbers:
                     numbers.insert(c, num)
-                
+    
 print("="*30)
 print(numbers)
