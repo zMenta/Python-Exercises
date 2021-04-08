@@ -17,6 +17,8 @@ while choice == "Y":
 
     choice = input("Want to continue? [Y/N]").upper()
 
+numbers.sort()
+
 print(f"\nThe numbers that you typed are: {numbers}")
 
 print("="*30)
