@@ -2,7 +2,7 @@
 
 numbers = []
 
-for i in range(8):
+for i in range(5):
     
     num = int(input("Type an number: "))
 
@@ -10,16 +10,14 @@ for i in range(8):
     if len(numbers) == 0:
         numbers.insert(0, num)
     else:
+
         #Number Placement Verifier 
         if num >= max(numbers):
             numbers.insert(i+1, num)
-        elif num <= min(numbers):
-            numbers.insert(0, num)
         else:
             for c in range(len(numbers)):
                 if num < numbers[c] and num not in numbers:
                     numbers.insert(c, num)
-
+                
 print("="*30)
 print(numbers)
-
