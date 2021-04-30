@@ -3,7 +3,7 @@
 numbers = []
 
 for i in range(5):
-    numbers.append(int(input(f"Type the number of {i}th postion: ")))
+    numbers.append(int(input(f"Type the number of {i}th position: ")))
 
 print("-="*40)
 
