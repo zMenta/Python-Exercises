@@ -14,7 +14,7 @@ print(f"The highest number that you typed is {max(numbers)}, and it is on the",e
 #Highest number position verifier 
 for posi,index in enumerate(numbers):
     if index == max(numbers):
-        print(f" {posi}th,",end="")
+        print(f" {posi}th,",end="") 
 print(" position.")
 
 print(f"And the lowest number that you typed is {min(numbers)}, and it is on the",end="")
