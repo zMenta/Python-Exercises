@@ -1,5 +1,8 @@
 #Check if the user typed the correct numbers of parenthesis of an expression. Example (a+b) -> valid expression. (a+b*(c) -> invalid
 
+#HAVE A LOGIC ERROR
+#Don't check the correct position!
+
 expression = str(input("Type your expression with parenthesis:"))
 
 #sum of "(" ")"
