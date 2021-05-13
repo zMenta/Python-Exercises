@@ -1,6 +1,6 @@
 #Create a school report card. That can register various students and 2 grades for each student.Show the students average grade and if you want to check a specific studen grade at the end of the algorithm. Using only 1 list to store all the data.
 
-report = [["Carlos", 10, 8 ,9.85], ["Rodrigo", 4, 5, 6.345], ["Gustavons", 3, 8, 7.98125]]  #TEST
+report = [["Carlos", 10, 8 ,9.85], ["Rodrigo", 4, 5, 6.345], ["Gustavons", 3, 8, 7.781]]  #TEST
 #report = []
 student = []
 
@@ -17,9 +17,12 @@ student = []
 #     student.clear()
     
 print("="*50)
-print("{:6}{:20}{}".format("Num.","|NAME","|{:^22}{}".format("Final Grade","|")))
+# print("{:6}{:20}{}".format("Num.","|NAME","|{:^22}{}".format("Final Grade","|")))
+print("|{:^6}|{:^19}|{:^21}|".format("Num.","NAME","Final Grade"))
+print("|{:6}|{:19}|{:21}|".format("-"*6, "-"*19, "-"*21 ))
 for i in range(len(report)):
-    print(f"{i:<6}|{report[i][0]:^19}|{report[i][3]:^22.1f}|")
+    print(f"|{i:^6}|{report[i][0]:^19}|{report[i][3]:^21.1f}|")
 print("="*50)
 print(report)
+
 
