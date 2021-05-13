@@ -31,7 +31,7 @@ student = []
 print("="*50)
 print("|{:^6}|{:^19}|{:^21}|".format("Num.","NAME","Final Grade"))
 print("|{:6}|{:19}|{:21}|".format("-"*6, "-"*19, "-"*21 ))
-for i in range(len(report)):
+for i in range(len(report)):  #Shows the students final grades and names in a chart.
     print(f"|{i:^6}|{report[i][0]:^19}|{report[i][3]:^21.1f}|")
 print("="*50)
 print(report)
@@ -49,5 +49,17 @@ while True: #Asks if the user want to check for specific students grades.
         break
     else:
         study_name = str(input("Please type the name of the student: ")).strip()
+        for i in range(len(report)):
+            if report[i][0] == study_name:
+                print("="*50)
+                print("|{:^6}|{:^19}|{:^10}|{:^10}|".format("Num.","NAME", "Grade 1", "Grade 2" ))
+                print("|{:^6}|{:^19}|{:10}|{:10}|".format("-"*6, "-"*19, "-"*10, "-"*10))
+                print("|{:^6}|{:^19}|{:^10}|{:^10}|".format(i, report[i][0], report[i][1], report[i][2]))
+                print("="*50)
+                name_found = True
+                break
+        if name_found not True:
+
+        
 
 
