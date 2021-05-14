@@ -15,5 +15,4 @@ for i in range(int(input("How many guesses you want to make?"))):
 print("="*50)
 for i in range(len(gambles)):
     print(f"Guess {i} : {gambles[i]}")
-
 print("="*50)
