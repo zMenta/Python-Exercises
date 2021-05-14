@@ -18,6 +18,6 @@ for row in range(3):
         grid[row].append(int(input(f"Please type an number to fill the grid space {row},{column} :")))
 
 print("="*60)
-print(grid[0])
-print(grid[1])
-print(grid[2])
+for i in range(3):
+    print(grid[i])
+
