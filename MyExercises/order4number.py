@@ -1,4 +1,4 @@
-#order numbers a,b,c,d
+#order numbers a,b,c,d. Lowest to highest 
 
 a = int(input("Type a number A: "))
 b = int(input("Type a number B: "))

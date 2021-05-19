@@ -3,7 +3,3 @@
 numbers = []
 ch = "s"
 
-while ch == "s":
-    ch = str(input("Do you want to continue?"))
-
-

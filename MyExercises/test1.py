@@ -1,8 +1,5 @@
 # highest number and lowest 
 
-
-
-
 a = int(input(("Type the number A: ")))
 b = int(input(("Type the number B: ")))
 c = int(input(("Type the number C: ")))
