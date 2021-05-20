@@ -6,7 +6,6 @@ from random import randint
 number = []
 sort = True
 
-
 qt = int(input("How many numbers you want to type?")) #qt = quantity 
 
 for i in range(1,qt+1):
@@ -24,5 +23,5 @@ while sort:
 
     if num_change == number:
         sort = False
-           
+        
 print(f"SORTED LIST: {number}")
