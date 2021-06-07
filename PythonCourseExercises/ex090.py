@@ -1,4 +1,4 @@
-#Write a algorithm that reads the name and the final grade of a student ( grade > 7 is approved, < 7 failed). Then stores the situation this student is in a dictionary
+#Write a algorithm that reads the name and the final grade of a student ( grade > 7 is approved, < 7 failed). Then stores the situation of this student in a dictionary
 
 record = {}
 
