@@ -16,27 +16,28 @@ for k,v in game.items():
     sleep(0.2)
 
 Sorted = False
+g = 0
 high = game["Player1"]
 
 while Sorted is not True:
-    for i in range(0,len(game)): #Check for the highest Dice played from the players. And assign the respective value to the high variable.
-        if game[f"Player{i+1}"] > high:
-            high = game[f"Player{i+1}"]
-        
-    for i in range(0,len(game)): #Check which player(s) has the highest score and add to the sort dictionary and pop it on the game dictionary.
-        if game[f"Player{i+1}"] == high:
-            sort[f"Player{i+1}"] = game[f"Player{i+1}"]
-            game.pop(f"Player{i+1}")
+    for i in game.values(): #Check for the highest Dice played from the players. And assign the respective value to the high variable.
+        if i > high:
+            high = i
+            
+    for i in game.keys(): #Check which player(s) has the highest score and add to the sort dictionary and pop it on the game dictionary.
+        if game[f"{i}"] == high:
+            sort[f"{i}"] = game[f"{i}"]
 
-    if len(sort) == 4:
+    if g == 4:
         Sorted = True
+
+    g += 1
 
 print(sort)
 print(game)
 
 
 print("Game Result:")
-
 
 
 # NEEDS WORK | NOT FINISHED
