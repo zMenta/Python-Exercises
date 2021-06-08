@@ -4,6 +4,7 @@ from random import randint
 from time import sleep
 
 game = {}
+sort = {}
 
 for i in range(1,5): #Randomize a value for each player.
     game[f"Player{i}"] = randint(1,6)
@@ -14,10 +15,28 @@ for k,v in game.items():
     print(f"{'':5}The {k} played {v} from the dice.")
     sleep(0.2)
 
+Sorted = False
+high = game["Player1"]
+
+while Sorted is not True:
+    for i in range(0,len(game)): #Check for the highest Dice played from the players. And assign the respective value to the high variable.
+        if game[f"Player{i+1}"] > high:
+            high = game[f"Player{i+1}"]
+        
+    for i in range(0,len(game)): #Check which player(s) has the highest score and add to the sort dictionary and pop it on the game dictionary.
+        if game[f"Player{i+1}"] == high:
+            sort[f"Player{i+1}"] = game[f"Player{i+1}"]
+            game.pop(f"Player{i+1}")
+
+    if len(sort) == 4:
+        Sorted = True
+
+print(sort)
+print(game)
+
+
 print("Game Result:")
-for i in game:
-    if i == 0:
-        game[i] = game.update
+
 
 
 # NEEDS WORK | NOT FINISHED
