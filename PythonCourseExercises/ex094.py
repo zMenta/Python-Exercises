@@ -1,6 +1,6 @@
 #Name,gender,age reader. Appends the person into a list.
 #Person is a dictionary.
-# 1) Show the average of age and who's age is greater or lower than the average.
+# 1) Show the average of age and who's age is greater than the average age. 
 # 2) Show all the female names.
 # 3) The amount of people registered.
 
@@ -11,6 +11,7 @@ people = {
 }
 
 group = []
+sum_age = 0
 
 while True:
     people["name"] = input(str("Please type the name of the person: "))
@@ -22,6 +23,7 @@ while True:
         else:
             print("Invalid answer. Please try again")
     people["age"] = int(input(f"Please type {people['name']} age: "))
+    sum_age += people["age"]
 
     #Appends the registered person to group
     group.append(people.copy())
@@ -40,5 +42,13 @@ while True:
     print("="*40)
 
 print("-"*50)
-for i in group:
-    print(i)
+print(f"The amount of people registered: {len(group)}")
+print("All the female names: ",end="")
+for person in group:
+    if person["gender"] == "F":
+        print(f"{person['name']},",end=" ")
+print(f"The average of the ages is: {sum_age/len(group)}")
+print("List of people that have the age greater than the average: ")
+for person in group:
+    if person["age"] > sum_age/len(group):
+        print(f"{'':5}Name: {person['name']:10} | Gender: {person['gender']:4} | Age: {person['age']:4}")
