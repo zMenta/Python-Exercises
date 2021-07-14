@@ -12,7 +12,6 @@ people = {
 
 group = []
 
-
 while True:
     people["name"] = input(str("Please type the name of the person: "))
     #-While Validate if the gender answer is either m or f.
@@ -22,10 +21,10 @@ while True:
             break
         else:
             print("Invalid answer. Please try again")
-    people["age"] = input(int(f"Please type {people['name']} age: "))
+    people["age"] = int(input(f"Please type {people['name']} age: "))
 
     #Appends the registered person to group
-    group.append(people)
+    group.append(people.copy())
     
     #-While Asks and verifies if the user wants to register another person
     while True: 
@@ -40,5 +39,6 @@ while True:
     
     print("="*40)
 
+print("-"*50)
 for i in group:
     print(i)
