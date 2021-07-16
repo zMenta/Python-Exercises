@@ -65,16 +65,38 @@ def match_result(p):
 #     print("=-"*20)
 
 print("-"*45)
-print(f"|{'Code':^6}|{'Name':^8}|{'Goals':^20}|{'Total':^7}|")
-print(f"|{'':-^6}|{'':-^8}|{'':-^20}|{'':-^7}|")
+print(f"|{'Code':^6}|{'Name':^8}|{'Total':^7}|{'Goals':^20}")
+print(f"|{'':-^6}|{'':-^8}|{'':-^7}|{'':-^20}")
 for p in range(len(player)):
-    print(f"|{p:^6}|{player[p]['name']:8}|{'':4}{player[p]['goals']}{'':^5}|{player[p]['total']:^7}|")
-    # print(f"|{p:^6}|{player[p]['name']:^6}|",end="")
-    # print("{}{}".format(player[p]['goals']),end="")
-    # print(f"|{player[p]['total']:^7}|")
-    print(f"|{'':-^6}|{'':-^8}|{'':-^20}|{'':-^7}|")
-print("-"*45)
-
+    print(f"|{p:^6}|{player[p]['name']:8}|{player[p]['total']:^7}|{'':5}{player[p]['goals']}")
+    print(f"|{'':-^6}|{'':-^8}|{'':-^7}|{'':-^20}")
 
 #-While, asks if the user wants to check for a specific player data.
-    
+while True:
+    #Ask the user if he wants to check a player stats.
+    while True:
+        choice = str(input("Want to check for a specific player? [y/n]")).upper()
+        if choice != "N" and choice != "Y":
+            print("Invalid answer. Please try again")
+        else:
+            break
+    if choice == "N":
+        break
+
+    #Ask for the player code and verifies it
+    while True:
+        code = int(input("Please type the code of the player: "))
+        if code not in range(len(player)):
+            print("Invalid Code. Please Try again:")
+        else:
+            break
+
+    #Options for the info.
+    while True:
+        option = int(input("1 - Match Results | 2 - Stats | 3 - Exit"))
+        if option == 1:
+            print(match_result(code))
+        elif option == 2:
+            print(p_keyvalues(code))
+        elif option == 3:
+            break
