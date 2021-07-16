@@ -26,7 +26,6 @@ while True:
         stats["total"] += stats["goals"][i]
 
     player.append(stats.copy())
-    
     #Make a proper copy of the "goals" list inside stats{}
     list_copy = stats["goals"]
     player[-1]["goals"] = list_copy[:]
@@ -59,8 +58,23 @@ def match_result(p):
         print(f"{'':5} -> In the {i}th match, scored {player[p]['goals'][i]} goals.")
     print(f"A total of {player[p]['total']} goals")
 
-for i in range(len(player)):
-    print(p_keyvalues(i))
-    print("-"*35)
-    print(match_result(i))
-    print("=-"*20)
+# for i in range(len(player)):
+#     print(p_keyvalues(i))
+#     print("-"*35)
+#     print(match_result(i))
+#     print("=-"*20)
+
+print("-"*45)
+print(f"|{'Code':^6}|{'Name':^8}|{'Goals':^20}|{'Total':^7}|")
+print(f"|{'':-^6}|{'':-^8}|{'':-^20}|{'':-^7}|")
+for p in range(len(player)):
+    print(f"|{p:^6}|{player[p]['name']:8}|{'':4}{player[p]['goals']}{'':^5}|{player[p]['total']:^7}|")
+    # print(f"|{p:^6}|{player[p]['name']:^6}|",end="")
+    # print("{}{}".format(player[p]['goals']),end="")
+    # print(f"|{player[p]['total']:^7}|")
+    print(f"|{'':-^6}|{'':-^8}|{'':-^20}|{'':-^7}|")
+print("-"*45)
+
+
+#-While, asks if the user wants to check for a specific player data.
+    
