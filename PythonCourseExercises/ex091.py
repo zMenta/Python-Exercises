@@ -2,9 +2,10 @@
 
 from random import randint
 from time import sleep
+from operator import itemgetter
 
 game = {}
-sort = {}
+ranking = {}
 
 for i in range(1,5): #Randomize a value for each player.
     game[f"Player{i}"] = randint(1,6)
@@ -15,29 +16,5 @@ for k,v in game.items():
     print(f"{'':5}The {k} played {v} from the dice.")
     sleep(0.2)
 
-Sorted = False
-g = 0
-high = game["Player1"]
-
-while Sorted is not True:
-    for i in game.values(): #Check for the highest Dice played from the players. And assign the respective value to the high variable.
-        if i > high:
-            high = i
-            
-    for i in game.keys(): #Check which player(s) has the highest score and add to the sort dictionary and pop it on the game dictionary.
-        if game[f"{i}"] == high:
-            sort[f"{i}"] = game[f"{i}"]
-
-    if g == 4:
-        Sorted = True
-
-    g += 1
-
-print(sort)
-print(game)
-
-
-print("Game Result:")
-
-
-# NEEDS WORK | NOT FINISHED
+ranking = sorted(game.items(), key=itemgetter(1), reverse=True)
+print(ranking)
