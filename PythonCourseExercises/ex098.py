@@ -4,7 +4,7 @@ from time import sleep
 
 #start, end, c 
 
-def line(*x): #x = 1(or any number) is with line break | Default is no line break
+def line(*x): #x = 1(or any number) is 'with line break' | Default is 'no line break'
     if len(x) > 0:
         print()
     print("-="*19)
