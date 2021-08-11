@@ -11,7 +11,7 @@ def fac(num=1,show=False):
         f *= i
 
     if not show:
-        print(f"The factorial of {num} is {f}")
+        return f
     else:
         for i in range(num,0,-1):
             print(f"{i}",end="")
@@ -22,7 +22,7 @@ def fac(num=1,show=False):
 #Main Body
 
 fac(5,True)
-fac(4)
+print(fac(4))
 fac(7,True)
-fac()
+print(fac())
 
