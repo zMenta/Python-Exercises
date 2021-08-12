@@ -1,8 +1,5 @@
 #Create a function that has the year of birth as a parameter. Inform the user if his vote is optional,denied or mandatory.
 
-from datetime import date
-
-
 #Functions
 
 def vote(birth):
@@ -14,6 +11,7 @@ def vote(birth):
     Function to return the status of vote, depending on the age of the person.
     <16 denied, <18 optional, <60 mandatory, >60 optional.
     """
+    from datetime import date
     age = date.today().year - birth
     
     print(f"With {age} years: VOTE - ", end="")
