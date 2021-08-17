@@ -1,0 +1,1 @@
+print("IMPORTED MODULE2")
