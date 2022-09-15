@@ -1,5 +1,3 @@
-from shutil import move
-import sys
 
 array = [0, 1, 1, 1]
 array = [1, 1]
