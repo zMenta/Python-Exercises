@@ -1,4 +1,3 @@
-import sys
 
 array = [1, 30, 1, 2]
 
