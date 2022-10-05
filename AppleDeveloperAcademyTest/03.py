@@ -6,7 +6,7 @@ import sys
 array_size = 5
 array = [10, 10, 20, 20, 30, 30]
 
-lowest_sum = sum[array]
+lowest_sum = sum(array)
 highest_sum = array[0]
 
 
